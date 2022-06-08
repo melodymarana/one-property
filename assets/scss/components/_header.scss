@@ -1,0 +1,38 @@
+.banner {
+    .item {
+        position: relative;
+
+        &-caption {
+            @include flex-align (center, center);
+
+            background: rgba($black, 0.2);
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: $white;
+            
+            .title {
+                @include psl-narissara-pro;
+
+                @media (min-width: 768px) {
+                    font-size: 9.375rem;
+                }
+                font-size: 4rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5rem;
+                line-height: 0.8;
+            }
+
+            .description {
+                @include adobe-thai;
+                @media (min-width: 768px) {
+                    font-size: 1.5rem;
+                }
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

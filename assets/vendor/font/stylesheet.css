@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'PSL Narissara Pro ()';
+    src: url('PSLNarissaraProBold.eot');
+    src: url('PSLNarissaraProBold.eot?#iefix') format('embedded-opentype'),
+        url('PSLNarissaraProBold.woff2') format('woff2'),
+        url('PSLNarissaraProBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PSL Narissara Pro ()';
+    src: url('PSLNarissaraPro.eot');
+    src: url('PSLNarissaraPro.eot?#iefix') format('embedded-opentype'),
+        url('PSLNarissaraPro.woff2') format('woff2'),
+        url('PSLNarissaraPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

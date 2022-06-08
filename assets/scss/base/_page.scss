@@ -1,0 +1,212 @@
+body {
+  @include body-font;
+  background-color: $body;
+  display: block;
+  overflow-x: hidden;
+}
+
+a {
+  color: $primary;
+  &:hover,
+  &:focus {
+    color: darken($primary, 10%);
+  }
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover,
+  &:focus {
+    background: darken($primary, 3%);
+    border-color: darken($primary, 3%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+}
+
+.header {
+  display: block;
+  overflow-x: hidden;
+}
+
+.dropdown-toggle {
+  &::after {
+    content: "\f107";
+    border: 0;
+    font-family: $font-awesome-pro;
+    font-size: 0.75rem;
+    font-weight: normal;
+    vertical-align: middle;
+    margin-left: 0.35rem;
+  }
+}
+
+.nav-pills {
+  justify-content: center;
+
+  .nav-item {
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+
+  .nav-link {
+    border-radius: 1.5rem;
+    border: 1px solid $primary;
+    color: $primary;
+    padding: 0.125rem 1rem;
+    font-size: 0.875rem;
+    flex: 0 0 auto;
+    transition: color 0.5s ease-in-out;
+
+    @media (min-width: 768px) {
+      padding: 0.125rem 2rem;
+      font-size: 1.25rem;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: $primary;
+      color: white;
+    }
+  }
+}
+
+.item-image {
+  display: flex;
+  flex: 1;
+  position: relative;
+
+  .item-wrap {
+    @include position-absolute(0, 0, 0, 0);
+    @include flex-align(center, center);
+
+    background: rgba($black, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    .btn-expand {
+      @include flex-align(center, center);
+
+      background: $primary;
+      border-radius: 0;
+      color: white;
+      font-size: 1.125rem;
+
+      .icon {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .item-wrap {
+      opacity: 1;
+    }
+  }
+}
+
+.slick {
+  &-dots {
+    bottom: 1rem;
+    li {
+      width: 10px;
+      height: 10px;
+      margin: 0 3px;
+
+      button::before {
+        content: " ";
+        width: 10px;
+        height: 10px;
+        border: 2px solid $white;
+        opacity: 1;
+      }
+
+      &.slick-active {
+        button::before {
+          background: $primary;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#toTop {
+  @include flex-align(center, center);
+  @include kanit;
+
+  background: #62c2e5;
+  box-shadow: 0 8px 8px 0 rgba($black, 0.12);
+  color: $white;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+  flex-direction: column;
+  position: fixed;
+  z-index: 99;
+  bottom: -100%;
+  right: 1.5rem;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  transition: all 1.5s ease-in-out;
+
+  .icon {
+    font-size: 1.375rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &.show {
+    opacity: 1;
+    bottom: 4rem;
+    visibility: visible;
+  }
+}
+
+// Highlight color customization
+::-moz-selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+/* fix content width inside hidden tabs */
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  height: auto;
+}

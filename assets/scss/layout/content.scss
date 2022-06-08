@@ -1,0 +1,355 @@
+.section {
+    display: block;
+    overflow: hidden;
+    padding: 1.5rem 0;
+  
+    @media (min-width: 768px) {
+      padding: 3.125rem 0;
+    }
+  
+    &-heading {
+      color: $head-title;
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+  
+      @media (min-width: 768px) {
+        font-size: 2.25rem;
+        margin-bottom: 3.125rem;
+      }
+      &::before,
+      &::after {
+        content: " - ";
+      }
+    }
+  
+    &-concept {
+      padding-bottom: 0;
+  
+      .box {
+        @include flex-align(center, center);
+        flex-direction: column;
+        height: 100%;
+        color: $box-title;
+  
+        .title {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+  
+          @media (min-width: 768px) {
+            font-size: 3rem;
+          }
+        }
+  
+        .description {
+          font-size: 1rem;
+          margin-bottom: 1.25rem;
+  
+          @media (min-width: 768px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  
+    &-video {
+      position: relative;
+      padding: 0;
+      height: 350px;
+  
+      @media (min-width: 768px) {
+        height: 550px;
+      }
+  
+      .video {
+        width: 100%;
+        object-fit: cover;
+        height: 350px;
+  
+        @media (min-width: 768px) {
+          height: 550px;
+        }
+      }
+  
+      .section-content {
+        @include flex-align(center, center);
+        background: rgba($black, 0.2);
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+  
+        .title {
+          color: white;
+          font-size: 3rem;
+          text-align: center;
+        }
+  
+        .btn-video {
+          text-decoration: underline;
+          color: white !important;
+          font-size: 1.8rem;
+          .icon {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  
+    &-gallery {
+      padding-bottom: 0;
+  
+      /*.tab-content {
+        display: flex;
+        flex-direction: column;
+        
+        > .tab-pane {
+          display: block !important;
+          height: 0;
+        }
+      
+        > .active{
+          display: block !important;
+          height: auto;
+        }
+  
+      }*/
+  
+      .nav-gallery {
+        margin-bottom: 1.5rem;
+        flex-wrap: nowrap;
+  
+        @media (min-width: 768px) {
+          margin-bottom: 3.125rem;
+        }
+  
+        @media (max-width: 767.98px) {
+          flex: 1;
+        }
+      }
+  
+      .gallery {
+        display: flex;
+        margin-bottom: 0;
+      }
+    }
+  
+    &-myroom {
+      .item {
+        .item-image {
+          margin-bottom: 1.4rem;
+        }
+  
+        .item-description {
+          color: #333;
+          font-size: 1rem;
+  
+          .price {
+            font-size: 2rem;
+          }
+        }
+  
+        @media (max-width: 767.98px) {
+          display: table;
+          margin: 0 auto 0.5rem auto;
+        }
+      }
+    }
+  
+    &-map {
+      padding: 0;
+      color: #515151;
+  
+      .google-map {
+        display: flex;
+        height: 100%;
+  
+        .map {
+          width: 100%;
+          height: 350px;
+          @media (min-width: 768px) {
+            height: 100%;
+          }
+        }
+      }
+  
+      .section-content {
+        @include mitr;
+        font-weight: 200;
+  
+        small {
+          font-size: 0.875rem;
+        }
+  
+        .head-1 {
+          font-size: 2rem;
+          font-weight: 400;
+          letter-spacing: 1.5px;
+  
+          @media (min-width: 768px) {
+            font-size: 2.3rem;
+          }
+        }
+  
+        .head-2 {
+          font-size: 1rem;
+          font-weight: normal;
+          color: #2f2f2f;
+        }
+  
+        .font-weight-200 {
+          font-weight: 200;
+        }
+  
+        .contact-link {
+          .nav-link {
+            color: $primary;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  
+    &-contact {
+      background-color: $white;
+  
+      .section-content {
+        @include mitr;
+        color: #333;
+        font-weight: 200;
+  
+        small,
+        label {
+          font-size: 0.875rem;
+          font-weight: 200;
+        }
+      }
+  
+      .form-contact {
+        margin-top: 2rem;
+  
+        .form-control {
+          background-color: #f0f0f0;
+        }
+  
+        .btn-submit {
+          background-color: #dc4949;
+          border-radius: 0;
+          min-width: 12rem;
+          text-transform: uppercase;
+          font-weight: 300;
+          font-size: 1.125rem;
+  
+          &:hover,
+          &:focus {
+            background: darken($red, 5%);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    @include kanit;
+  
+    font-weight: 300;
+    background-color: $primary;
+    color: $white;
+    padding-top: 1.875rem;
+  
+    a {
+      color: $white;
+    }
+  
+    .list {
+      a {
+        text-decoration: underline;
+        line-height: 2;
+      }
+    }
+  
+    .input-group {
+      .form-control,
+      .btn {
+        height: 2.8rem;
+      }
+  
+      .btn {
+        background: #0b6d91;
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+  
+    .nav-social {
+      .nav-link {
+        @include flex-align(center, center);
+  
+        width: 35px;
+        height: 35px;
+        border: 2px solid $white;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        margin: 0.5rem 0.125rem;
+      }
+    }
+  
+    .footer-heading {
+      font-size: 1.125rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+  
+    .footer-content {
+      margin-bottom: 3rem;
+  
+      .title {
+        font-size: 1.125rem;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+  
+      .content {
+        font-size: 0.875rem;
+      }
+  
+      &.subscribe,
+      &.follow-us {
+        @media (min-width: 768px) {
+          max-width: 300px;
+          margin: auto;
+        }
+      }
+  
+      &.follow-us {
+        .content-wrap {
+          @include flex-align(center, flex-start);
+        }
+  
+        @media (min-width: 768px) {
+          margin-top: 3rem;
+        }
+      }
+  
+      &.our-project {
+        @media (min-width: 768px) {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  
+    .footer-copyright {
+      @include mitr;
+  
+      padding-bottom: 1rem;
+      font-size: 0.75rem;
+      margin-bottom: 0;
+    }
+  }
+  

@@ -1,0 +1,44 @@
+// Font Mixins
+@mixin body-font {
+  font-family: 'Dotum', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin heading-font {
+  font-family: 'Dotum', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+}
+
+@mixin adobe-thai {
+  font-family: 'Adobe Thai', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin psl-narissara-pro {
+  font-family: 'PSL Narissara Pro', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin mitr {
+  font-family: 'Mitr', 'Dotum', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin kanit {
+  font-family: 'Kanit', 'Dotum', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin serif-font {
+  font-family: 'Droid Serif', 'Helvetica Neue', Arial, sans-serif;
+}
+
+//style
+@mixin flex-align ($align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin position-absolute ($left, $right, $top, $bottom) {
+  position: absolute;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+}

@@ -1,0 +1,17 @@
+@keyframes fade-up {
+    0%   {
+        right: 100rem;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+  }
+
+  .fade-up.active {
+    position: relative;
+    animation-name: fade-up;
+    animation-duration: 0.5s;
+  }
