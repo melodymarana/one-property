@@ -30,6 +30,10 @@
       color: $white;
       font-size: 0.875rem;
       font-weight: 300;
+      transition: color 0.3s ease-in-out;
+      &:hover, &:focus {
+        color: $accent;
+      }
     }
   }
 

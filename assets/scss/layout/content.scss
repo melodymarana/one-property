@@ -85,8 +85,9 @@
   
         .title {
           color: white;
-          font-size: 3rem;
+          font-size: 4rem;
           text-align: center;
+          letter-spacing: 0.5rem;
         }
   
         .btn-video {
@@ -237,8 +238,9 @@
         }
   
         .btn-submit {
-          background-color: #dc4949;
-          border-radius: 0;
+          background-color: transparent;
+          border: 1px solid $primary;
+          color: $primary;
           min-width: 12rem;
           text-transform: uppercase;
           font-weight: 300;
@@ -246,7 +248,8 @@
   
           &:hover,
           &:focus {
-            background: darken($red, 5%);
+            background: $primary;
+            color: $white;
           }
         }
       }
@@ -254,8 +257,6 @@
   }
 
   .footer {
-    @include kanit;
-  
     font-weight: 300;
     background-color: $primary;
     color: $white;
